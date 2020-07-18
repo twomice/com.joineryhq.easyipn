@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : easyipn.xml
+    Created on : July 17, 2020, 3:00 PM
+    Author     : as
+    Description:
+        Purpose of the document follows.
+-->
+<root>
+  <item>
+    <path>civicrm/admin/setting/ipn-url</path>
+    <page_callback>CRM_Easyipn_Page_Easyipn</page_callback>
+    <title>Easyipn</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</root>
