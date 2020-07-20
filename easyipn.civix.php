@@ -475,36 +475,3 @@ function _easyipn_civix_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
 function _easyipn_civix_civicrm_entityTypes(&$entityTypes) {
   $entityTypes = array_merge($entityTypes, []);
 }
-
-/**
- * (Delegated) Implements hook_civicrm_links().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_links/
- */
-function _easyipn_civix_civicrm_links($op, $objectName, $objectId, &$links, &$mask, &$values) {
-  $myLinks = array();
-
-  switch ($objectName) {
-    case 'PaymentProcessor':
-      $args = array(
-        'payment_processor_id' => $objectId,
-      );
-
-      $ipn_url = CRM_Easyipn_Page_Easyipn::get_ipn_page_url($args);
-
-      switch ($op) {
-        case 'paymentProcessor.manage.action':
-          // Adds a link to the main tab.
-          $links[] = array(
-            'name' => ts('IPN URL'),
-            'url' => $ipn_url,
-            'title' => 'IPN URL',
-            'extra' => 'target="_blank"',
-            'class' => 'crm-popup',
-          );
-          break;
-      }
-  }
-
-  return $myLinks;
-}
