@@ -184,18 +184,3 @@ function easyipn_civicrm_links($op, $objectName, $objectId, &$links, &$mask, &$v
 //function easyipn_civicrm_preProcess($formName, &$form) {
 //
 //}
-
-/**
- * Implements hook_civicrm_navigationMenu().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
- */
-function easyipn_civicrm_navigationMenu(&$menu) {
- _easyipn_civix_insert_navigation_menu($menu, 'Administer/System Settings', array(
-   'label' => E::ts('IPN URL'),
-   'name' => 'IPN URL',
-   'url' => 'civicrm/admin/setting/ipn-url',
-   'permission' => 'administer CiviCRM',
- ));
- _easyipn_civix_navigationMenu($menu);
-}
