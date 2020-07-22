@@ -161,9 +161,9 @@ function easyipn_civicrm_links($op, $objectName, $objectId, &$links, &$mask, &$v
         case 'paymentProcessor.manage.action':
           // Adds a link to the main tab.
           $links[] = array(
-            'name' => ts('IPN URL'),
+            'name' => ts('Notification URL'),
             'url' => $ipn_url,
-            'title' => 'IPN URL',
+            'title' => 'Notification URL',
             'extra' => 'target="_blank"',
             'class' => 'crm-popup',
           );
