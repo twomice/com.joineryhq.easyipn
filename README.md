@@ -1,6 +1,6 @@
 # CiviCRM: Easy IPN URL
 
-[Screenshot](/images/screenshot.png)
+![Screenshot](/images/screenshot.png)
 
 This extension provides a link labeled "Notification URL" in the actions menu of each Payment Processor listed at `civicrm/admin/paymentProcessor`. Clicking this link reveals an aeasy-to-copy representation of the correct [IPN Notify URL](https://docs.civicrm.org/sysadmin/en/latest/setup/payment-processors/recurring/#IPN%20notify%20URL) for that payment processor.
 
