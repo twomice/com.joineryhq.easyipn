@@ -12,6 +12,9 @@ class CRM_Easyipn_Page_Easyipn extends CRM_Core_Page {
       $this->assign('ipn_link', $ipn_full_link);
     }
 
+    CRM_Core_Resources::singleton()->addStyleFile('com.joineryhq.easyipn', 'css/easyipn.css');
+    CRM_Core_Resources::singleton()->addScriptFile('com.joineryhq.easyipn', 'js/easyipn.js');
+
     parent::run();
   }
 
