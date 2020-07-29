@@ -10,25 +10,25 @@ class CRM_Easyipn_Page_Easyipn extends CRM_Core_Page {
     if (isset($_GET['payment_processor_id'])) {
 
       // Get payment processor id
-      $pp_type_ID = CRM_Core_DAO::getFieldValue('CRM_Financial_DAO_PaymentProcessor',
+      $ppTypeID = CRM_Core_DAO::getFieldValue('CRM_Financial_DAO_PaymentProcessor',
         $_GET['payment_processor_id'],
         'payment_processor_type_id'
       );
 
       // Get payment processor name
-      $pp_type_name = CRM_Core_DAO::getFieldValue('CRM_Financial_DAO_PaymentProcessorType',
-        $pp_type_ID,
+      $ppTypeName = CRM_Core_DAO::getFieldValue('CRM_Financial_DAO_PaymentProcessorType',
+        $ppTypeID,
         'name'
       );
 
-      if ($pp_type_name === 'GoCardless') {
-        $ipn_full_link = CRM_Utils_System::url('civicrm/gocardless/webhook', NULL, TRUE, NULL, FALSE, TRUE);
+      if ($ppTypeName === 'GoCardless') {
+        $ipnFullLink = CRM_Utils_System::url('civicrm/gocardless/webhook', NULL, TRUE, NULL, FALSE, TRUE);
       }
       else {
-        $ipn_full_link = CRM_Utils_System::url('civicrm/payment/ipn/' . $_GET['payment_processor_id'], NULL, TRUE, NULL, FALSE, TRUE);
+        $ipnFullLink = CRM_Utils_System::url('civicrm/payment/ipn/' . $_GET['payment_processor_id'], NULL, TRUE, NULL, FALSE, TRUE);
       }
 
-      $this->assign('ipn_link', $ipn_full_link);
+      $this->assign('ipn_link', $ipnFullLink);
     }
 
     CRM_Core_Resources::singleton()->addStyleFile('com.joineryhq.easyipn', 'css/easyipn.css');
