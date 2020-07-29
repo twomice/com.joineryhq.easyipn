@@ -28,7 +28,7 @@ class CRM_Easyipn_Page_Easyipn extends CRM_Core_Page {
         $ipnFullLink = CRM_Utils_System::url('civicrm/payment/ipn/' . $_GET['payment_processor_id'], NULL, TRUE, NULL, FALSE, TRUE);
       }
 
-      $this->assign('ipn_link', $ipnFullLink);
+      $this->assign('ipnLink', $ipnFullLink);
     }
 
     CRM_Core_Resources::singleton()->addStyleFile('com.joineryhq.easyipn', 'css/easyipn.css');
