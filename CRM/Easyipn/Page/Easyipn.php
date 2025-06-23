@@ -37,7 +37,7 @@ class CRM_Easyipn_Page_Easyipn extends CRM_Core_Page {
     parent::run();
   }
 
-  public function get_ipn_page_url($query = NULL) {
+  public static function get_ipn_page_url($query = NULL) {
     return CRM_Utils_System::url('civicrm/admin/setting/ipn-url', $query);
   }
 
