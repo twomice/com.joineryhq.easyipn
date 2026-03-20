@@ -18,7 +18,7 @@
   <version>1.0.1</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.45</ver>
+    <ver>5.51</ver>
   </compatibility>
   <comments>Adds a link labeled "Notification URL" in the actions menu of each Payment Processor listed at civicrm/admin/paymentProcessor.</comments>
   <classloader>
@@ -27,11 +27,12 @@
   </classloader>
   <civix>
     <namespace>CRM/Easyipn</namespace>
-    <format>24.09.1</format>
+    <format>25.10.2</format>
   </civix>
   <mixins>
     <mixin>menu-xml@1.0.0</mixin>
     <mixin>smarty-v2@1.0.3</mixin>
     <mixin>entity-types-php@2.0.0</mixin>
+    <mixin>scan-classes@1.0.0</mixin>
   </mixins>
 </extension>

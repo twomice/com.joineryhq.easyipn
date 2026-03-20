@@ -75,7 +75,6 @@ class CRM_Easyipn_ExtensionUtil {
     return self::CLASS_PREFIX . '_' . str_replace('\\', '_', $suffix);
   }
 
-
 }
 
 use CRM_Easyipn_ExtensionUtil as E;
